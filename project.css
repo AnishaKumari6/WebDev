@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(130, 225, 203);
+     background-image: url(hoddies.webp);
+    background-size: cover;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
