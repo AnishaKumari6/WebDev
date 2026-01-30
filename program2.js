@@ -60,4 +60,5 @@ console.log(male.age + " " + female.age);
 male.eyecolor="blue";
 
 
+//LETS ATART WITH ARRAY:
 
