@@ -149,12 +149,15 @@ const navStyle = {
   display: "flex",
   justifyContent: "space-between",
   padding: 20,
-  background: "#e0e0e0",
-  color: "black"
+  background: "#fcf9f9",
+  color: "black",
+  borderRadius: 12
+  
 };
 
 const navLinks = {
   display: "flex",
+  justifyContent: "space-between",
   gap: 24,
   alignItems: "center"
 };
@@ -162,8 +165,9 @@ const navLinks = {
 const cartLink = {
   display: "flex",
   alignItems: "center",
-  gap: 6,
+  gap: 12,
   position: "relative"
+  
 };
 
 const cartIcon = {
@@ -205,7 +209,7 @@ const sliderTrack = {
 
 const card = {
   minWidth: 260,
-  background: "#f2f2f2",
+  background: "#f5ede6",
   padding: 20,
   borderRadius: 12,
   textAlign: "center",
@@ -241,7 +245,7 @@ const arrow = {
 const pageBox = {
   maxWidth: 900,
   margin: "40px auto",
-  background: "#f7f7f7",
+  background: "#fcebeb",
   padding: 40,
   borderRadius: 12,
   boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
