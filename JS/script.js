@@ -21,3 +21,4 @@ console.log(typeof(nums));
 let str=String(nums);
 console.log(typeof(str));
 console.log(typeof(str));
+console.log(typeof(str));
