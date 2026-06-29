@@ -1,24 +1,29 @@
-let num=78;
-if(num>=90){
-    console.log("Grade: A");
-}else if(num>=80){
-    console.log("Grade: B");
-}else if(num>=70){
-    console.log("Grade: C");
-}else if(num>=60){
-    console.log("Grade: D");
-}else{
-    console.log("Grade: F");
-}
+const button = document.getElementById("btn");
+const title = document.getElementById("title");
+const description = document.getElementById("description");
+const todoList = document.getElementById("todo-list");
 
-let name="Anisha";
-const ID=2345;//cannot be redeclaredor reassigned
-let salary=567676;//can be reassigned but cannot be redeclared
-console.table([name,ID,salary]);
+button.addEventListener("click", function () {
+    if (title.value.trim() === "" || description.value.trim() === "") {
+        alert("Please fill all fields");
+        return;
+    }
+    const todo = document.createElement("div");
+    todo.classList.add("todo");
+    const heading = document.createElement("h3");
+    heading.innerText = title.value;
+    const para = document.createElement("p");
+    para.innerText = description.value;
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Delete";
+    deleteBtn.addEventListener("click", function () {
+        todo.remove();
+    });
+    todo.appendChild(heading);
+    todo.appendChild(para);
+    todo.appendChild(deleteBtn);
+    todoList.appendChild(todo);
 
-let nums=1234;
-console.log(typeof(nums));
-let str=String(nums);
-console.log(typeof(str));
-console.log(typeof(str));
-console.log(typeof(str));
+    title.value = "";
+    description.value = "";
+});
