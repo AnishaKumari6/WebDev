@@ -37,3 +37,4 @@ setTimeout(() => console.log('6'), 2000);
 Promise.resolve().then(() => console.log('7'));
 console.log('9');
 // 1,2,5,9,8,7,4,6,3
+
