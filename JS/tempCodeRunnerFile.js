@@ -57,29 +57,29 @@
 
 function getProducts() {
     return new Promise((resolve, reject) => {
-        console.log("getProducts");
+        console.log('getProducts'); 
         setTimeout(() => {
-            let success = true;
+            let success = true; 
             if (success) {
-              
-                resolve("products data");
+                console.log('products fetched successfully');
+                resolve('products data');
             } else {
-                
-                reject("error fetching products");
-            }
+                console.log('error fetching products');
+                reject('error fetching products');
+            }   
         }, 2000);
-    });
 }
-
 function getOffers() {
     return new Promise((resolve, reject) => {
-        console.log("getOffers");
+        console.log('getOffers');
         setTimeout(() => {
             let success = true;
             if (success) {
-                resolve("offers data");
+                console.log('offers fetched successfully');
+                resolve('offers data');
             } else {
-                reject("error fetching offers");
+                console.log('error fetching offers');
+                reject('error fetching offers');
             }
         }, 1000);
     });
@@ -87,25 +87,17 @@ function getOffers() {
 
 function getCategories() {
     return new Promise((resolve, reject) => {
-        console.log("getCategories");
+        console.log('getCategories');
         setTimeout(() => {
             let success = true;
-            if (success) {               
-                resolve("categories data");
+            if (success) {
+                console.log('categories fetched successfully');
+                resolve('categories data');
             } else {
-                reject("error fetching categories");
+                console.log('error fetching categories');
+                reject('error fetching categories');
             }
         }, 1500);
     });
 }
-Promise.all([
-    getProducts(),
-    getOffers(),
-    getCategories()
-])
-.then((result) => {
-    console.log(result);
-})
-.catch((error) => {
-    console.log(error);
-});
+          
