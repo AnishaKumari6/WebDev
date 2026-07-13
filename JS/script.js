@@ -59,7 +59,7 @@ function getProducts() {
     return new Promise((resolve, reject) => {
         console.log("getProducts");
         setTimeout(() => {
-            let success = true;
+            let success = false;
             if (success) {
               
                 resolve("products data");
@@ -75,7 +75,7 @@ function getOffers() {
     return new Promise((resolve, reject) => {
         console.log("getOffers");
         setTimeout(() => {
-            let success = true;
+            let success = false;
             if (success) {
                 resolve("offers data");
             } else {
@@ -89,7 +89,7 @@ function getCategories() {
     return new Promise((resolve, reject) => {
         console.log("getCategories");
         setTimeout(() => {
-            let success = true;
+            let success = false;
             if (success) {               
                 resolve("categories data");
             } else {
@@ -98,7 +98,7 @@ function getCategories() {
         }, 1500);
     });
 }
-Promise.all([
+Promise.any([
     getProducts(),
     getOffers(),
     getCategories()

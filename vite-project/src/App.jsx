@@ -108,3 +108,14 @@ function App() {
 }
 
 export default App;
+
+
+// React memo(memorize component)
+// use memo(for calculation)
+// use callbak(so that function would not recreated)
+// props
+// types of promises other that await/asyn
+// prop drilling  - context API
+// hoisting
+//use context
+//  state and props
