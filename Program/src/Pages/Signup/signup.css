@@ -1,0 +1,6 @@
+@import "../Login/login.css";
+
+/* Specific overrides or enhancements for Signup form if any */
+.login-box button[type="submit"] {
+  background: var(--brand-gradient);
+}

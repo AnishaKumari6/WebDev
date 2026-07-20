@@ -1,0 +1,95 @@
+/* Target only the About Page container wrapper which has no class names */
+nav.navbar + div:not(.Light):not(.Dark):not(.login-container) {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px 24px;
+  text-align: center;
+  min-height: calc(100vh - 260px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  animation: fadeIn var(--transition-slow);
+}
+
+/* About page paragraph text (originally "This my About Page") */
+nav.navbar + div:not(.Light):not(.Dark):not(.login-container) > p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Inject Header Title */
+nav.navbar + div:not(.Light):not(.Dark):not(.login-container)::before {
+  content: "About our project";
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.03em;
+}
+
+
+nav.navbar + div:not(.Light):not(.Dark):not(.login-container)::after {
+  
+  display: block;
+  white-space: pre-line;
+  margin-top: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 35px 25px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 500;
+  max-width: 620px;
+  transition: all var(--transition-normal);
+}
+
+nav.navbar + div:not(.Light):not(.Dark):not(.login-container):hover::after {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+/* Page fade-in transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness for mobile screens */
+@media (max-width: 768px) {
+  nav.navbar + div:not(.Light):not(.Dark):not(.login-container) {
+    margin: 30px auto;
+    padding: 20px 16px;
+  }
+  
+  nav.navbar + div:not(.Light):not(.Dark):not(.login-container)::before {
+    font-size: 2.2rem;
+  }
+  
+  nav.navbar + div:not(.Light):not(.Dark):not(.login-container) > p {
+    font-size: 1.1rem;
+  }
+  
+  nav.navbar + div:not(.Light):not(.Dark):not(.login-container)::after {
+    font-size: 0.95rem;
+    padding: 25px 15px;
+  }
+}

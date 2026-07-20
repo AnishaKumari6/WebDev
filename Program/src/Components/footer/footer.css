@@ -1,0 +1,61 @@
+
+.Light, .Dark {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Light > div:last-child:not([class]),
+.Dark > div:last-child:not([class]) {
+  margin-top: auto;
+  padding: 40px 24px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  box-sizing: border-box;
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+
+.Light > div:last-child:not([class]) {
+  background: rgba(241, 245, 249, 0.8);
+}
+
+.Dark > div:last-child:not([class]) {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.Light > div:last-child:not([class]) > p,
+.Dark > div:last-child:not([class]) > p {
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.Light > div:last-child:not([class])::after,
+.Dark > div:last-child:not([class])::after {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  white-space: pre-line;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-weight: 500;
+  margin-top: 6px;
+  letter-spacing: 0.01em;
+  
+}
+
+@media (max-width: 480px) {
+  .Light > div:last-child:not([class]),
+  .Dark > div:last-child:not([class]) {
+    padding: 30px 16px;
+  }
+}
